@@ -20,7 +20,7 @@ public class BasePage {
     private static final Logger log = LogManager.getLogger(BasePage.class.getName());
 
     public BasePage() {
-        PageFactory.initElements(driver, this);   //this step to initialise pagefactory elements(@FindBy)
+       // PageFactory.initElements(driver, this);   //this step to initialise pagefactory elements(@FindBy)
         PropertyConfigurator.configure(projectPath + "/src/test/java/resources/propertiesfile/log4j.properties");
     }
 

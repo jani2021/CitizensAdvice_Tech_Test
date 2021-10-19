@@ -3,7 +3,10 @@ package test.tech.citizensadv.pages;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import test.tech.citizensadv.utility.Utility;
+
+import java.util.List;
 
 public class GooglePage extends Utility {
 
@@ -22,8 +25,18 @@ public class GooglePage extends Utility {
     }
 
     public void setGoogleSearchBox() {
-        sendTextToElement(googleSearchBox,"Citizens Advice");
+        sendTextToElement(googleSearchBox, "Citizens Advice");
         log.info("Sending Text to Google Search Box :" + googleSearchBox.toString() + "<br>");
+
+//        List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='wM6W7d']"));
+//        System.out.println("Total number of suggestions in search box: "+ list.size());
+//              for(int i=0; i<list.size(); i++) {
+//            System.out.println(list.get(i).getText());
+//            if (list.get(i).getText().contains("Citizens Advice")) {
+//                list.get(i).click();
+//                break;
+//            }
+//        }
     }
 
 
