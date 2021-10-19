@@ -1,0 +1,24 @@
+2021-10-14 13:10:863 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 13:10:257 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 13:10:850 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 14:10:147 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 14:10:898 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 14:10:589 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 14:10:486 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 18:10:282 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 18:10:349 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 18:10:123 INFO  HomePage :32 - Verify Text, Welcome to Citizens Advice : By.xpath: //h1[contains(text(),'Welcome to Citizens Advice')]
+2021-10-14 18:10:919 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-14 18:10:472 INFO  HomePage :32 - Verify Text, Welcome to Citizens Advice : By.xpath: //h1[contains(text(),'Welcome to Citizens Advice')]
+2021-10-14 18:10:781 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 10:10:463 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 10:10:87 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 10:10:871 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 10:10:88 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:666 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:757 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:568 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:551 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:741 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:350 INFO  BasePage :30 - Launching Chrome Browser 
+2021-10-16 13:10:871 INFO  BasePage :30 - Launching Chrome Browser 
