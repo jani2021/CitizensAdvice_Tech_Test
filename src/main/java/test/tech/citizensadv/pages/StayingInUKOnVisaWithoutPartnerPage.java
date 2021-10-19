@@ -12,13 +12,10 @@ public class StayingInUKOnVisaWithoutPartnerPage extends Utility {
     private static final Logger log = LogManager.getLogger(StayingInUKOnVisaWithoutPartnerPage.class.getName());
 
     //Page Object Model
-    By verifyStayingInUKOnVisaPage = By.xpath("//body/div[1]/div[4]/div[1]/div[1]/div[1]/main[1]/h1[1]/span[1]/span[1]");
-    By verifyImmigartionRelatedHelp = By.xpath("//a[contains(text(),'search for an immigration adviser')]");
+    By verifyStayingInUKOnVisaPage = By.xpath("//a[contains(text(),'Staying in the UK on a visa without your partner')]");
+    By verifyImmigartionRelatedHelp = By.xpath("//body/div[1]/div[4]/div[1]/div[1]/div[1]/main[1]/h1[1]/span[1]/span[1]");
+    // OR  -->   //a[contains(text(),'search for an immigration adviser')]
 
-//    @FindBy(xpath = "//body/div[1]/div[4]/div[1]/div[1]/div[1]/main[1]/h1[1]/span[1]/span[1]")
-//    WebElement verifyStayingInUKOnVisaPage;
-//    @FindBy(xpath = "//a[contains(text(),'search for an immigration adviser')]")
-//    WebElement verifyImmigrationRelatedHelp;
 
     public String verifyStayingInUKOnVisaPage(){
         log.info("Verifying the Text, Staying in the UK on a visa without your partner : " + verifyStayingInUKOnVisaPage.toString());

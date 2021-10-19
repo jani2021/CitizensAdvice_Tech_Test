@@ -15,28 +15,44 @@ public class SearchStepdef {
 
     @Given("^I am on Google page$")
     public void iAmOnGooglePage() {
-        new GooglePage().clickOnAgreeBtn();
     }
 
-    @When("^I input text \"([^\"]*)\" in search box$")
-    public void iInputTextInSearchBox(String text)  {
-        new GooglePage().setGoogleSearchBox(text);
-        new GooglePage().clickOnGoogleSearchBtn();
+    @And("^I click on I agree PopUp$")
+    public void iClickOnIAgreePopUp() {
+        new GooglePage().setGooglePopUp();
+    }
+
+    @When("^I input text Citizens Advice in search box$")
+    public void iInputTextCitizensAdviceInSearchBox() {
+        new GooglePage().setGoogleSearchBox();
+    }
+
+    @And("^I click google search button$")
+    public void iClickGoogleSearchButton() {
+        new GooglePage().setGoogleSearchButton();
+    }
+
+    @And("^I click on the Citizens Advice Link$")
+    public void iClickOnTheCitizensAdviceLink() {
+        new GooglePage().setCitizensAdviceLink();
     }
 
     @Then("^I should be navigated to Citizens Advice Website$")
     public void iShouldBeNavigatedToCitizensAdviceWebsite() {
-        new GooglePage().setCitizensAdviceWebsite();
     }
 
-    @Given("^I am on Citizens Advice home page$")
-    public void iAmOnCitizensAdviceHomePage() {
-       Assert.assertEquals("Welcome to Citizens Advice", new HomePage().CitizensAdviceHomePage());
+    @And("^I click England as option$")
+    public void iClickEnglandAsOption()  {
+        new HomePage().setCitizensAdvicePopUp();
+    }
+
+    @And("^I am on Citizens Advice home page with England Selected$")
+    public void iAmOnCitizensAdviceHomePageWithEnglandSelected() {
+        Assert.assertEquals("Welcome to Citizens Advice", new HomePage().CitizensAdviceHomePage());
     }
 
     @And("^I am able to see the list of items$")
-    public void iAmAbleToSeeTheListOfItems(String items) {
-        new HomePage().setListOfItems(items);
+    public void iAmAbleToSeeTheListOfItems() {
     }
 
     @Then("^Verify list of items \"([^\"]*)\" on the main navigation header of the home page\\.$")
@@ -44,11 +60,6 @@ public class SearchStepdef {
         new HomePage().setListOfItems(items);
     }
 
-    @And("^I click England as option$")
-    public void iClickEnglandAsOption() throws InterruptedException {
-        Thread.sleep(3000);
-        new HomePage().clickEnglandFromPopUp();
-    }
     @When("^I click on Immigration tab$")
     public void iClickOnImmigrationTab() {
         new HomePage().setImmigrationTab();
@@ -59,24 +70,29 @@ public class SearchStepdef {
         Assert.assertEquals("Immigration", new ImmigrationPage().immigrationPage());
     }
 
-    @And("^Verify search results contain a link \"([^\"]*)\"$")
-    public void verifySearchResultsContainALink(String arg0)  {
-        Assert.assertEquals("Staying in the UK on a visa wihtout your partner", new ImmigrationPage().StayingInTheUKLink());
+    @And("^Verify search results contain a link Staying in the UK on a visa without your partner$")
+    public void verifySearchResultsContainALinkStayingInTheUKOnAVisaWithoutYourPartner() {
+        Assert.assertEquals("Staying in the UK on a visa without your partner", new ImmigrationPage().StayingInTheUKLink());
     }
 
-    @And("^I click on \"([^\"]*)\" link$")
-    public void iClickOnLink(String arg0)  {
+    @And("^I click on Staying in the UK on a visa without your partner link$")
+    public void iClickOnStayingInTheUKOnAVisaWithoutYourPartnerLink() throws InterruptedException {
+        Thread.sleep(3000);
         new ImmigrationPage().iClickOnStayingInTheUKLink();
     }
 
     @And("^I am navigated to Staying in the UK on a visa without your partner page$")
-    public void iAmNavigatedToStayingInTheUKOnAVisaWithoutYourPartnerPage() {
+    public void iAmNavigatedToStayingInTheUKOnAVisaWithoutYourPartnerPage() throws InterruptedException {
+        Thread.sleep(3000);
         Assert.assertEquals("Staying in the UK on a visa without your partner", new StayingInUKOnVisaWithoutPartnerPage().verifyStayingInUKOnVisaPage());
     }
 
     @Then("^Verify I can see immigration related help under main immigration section$")
-    public void verifyICanSeeImmigrationRelatedHelpUnderMainImmigrationSection() {
+    public void verifyICanSeeImmigrationRelatedHelpUnderMainImmigrationSection() throws InterruptedException {
+        Thread.sleep(3000);
         Assert.assertEquals("search for an immigration adviser", new StayingInUKOnVisaWithoutPartnerPage().verifyImmigrationRelatedHelp());
     }
+
+
 
 }

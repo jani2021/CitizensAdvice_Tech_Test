@@ -15,26 +15,21 @@ public class HomePage extends Utility {
     private static final Logger log = LogManager.getLogger(HomePage.class.getName());
 
     //Page Object Model
+    By citizensAdvicePopUp = By.xpath("//a[@class='home-extent-popup__link'][normalize-space()='England']");
+    //div[@class='home-extent-popup__options']/a[1]");
     By verifyCitizensAdviceHomePage = By.xpath("//h1[contains(text(),'Welcome to Citizens Advice')]");
-    By getAdviceForPopUp = By.xpath("//a[@class='home-extent-popup__link'][normalize-space()='England']");
     By listOfItems = By.xpath("//nav[@id='main-nav']");
     By ImmigrationTab = By.xpath("//body/nav[@id='main-nav']/ul[1]/li[8]/a[1]");
 
-//    Page Factory Model
-//    @FindBy(xpath = "//div[@class='home-extent-popup__options']/a[1]")
-//    WebElement selectEnglandInPopUp;
-//    @FindBy(xpath = "//nav[@id='main-nav']")
-//    WebElement listOfItems;
-//    @FindBy(xpath = "//body/nav[@id='main-nav']/ul[1]/li[8]/a[1]")
-//    WebElement ImmigrationTab;
 
-    public String CitizensAdviceHomePage (){
-        log.info("Verify Text, Welcome to Citizens Advice : " + verifyCitizensAdviceHomePage.toString());
-        return getTextFromElement(verifyCitizensAdviceHomePage);
+    public void setCitizensAdvicePopUp() {
+        clickOnElement(citizensAdvicePopUp);
+        log.info("Clicking on the Citizens Advice PopUp :" + citizensAdvicePopUp.toString() + "<br>");
     }
 
-    public void clickEnglandFromPopUp()  {
-        clickOnElement(getAdviceForPopUp);
+    public String CitizensAdviceHomePage() {
+        log.info("Verify Text, Welcome to Citizens Advice : " + verifyCitizensAdviceHomePage.toString());
+        return getTextFromElement(verifyCitizensAdviceHomePage);
     }
 
     public void setListOfItems(String items) {
@@ -49,9 +44,9 @@ public class HomePage extends Utility {
         }
     }
 
-  public void setImmigrationTab() {
+    public void setImmigrationTab() {
         log.info("Clicking on the Immigration Tab" + ImmigrationTab.toString() + "<br>");
         mouseHoverToElementAndClick(ImmigrationTab);
 
-  }
+    }
 }

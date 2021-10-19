@@ -16,12 +16,8 @@ public class ImmigrationPage extends Utility {
     By verifyStayingInTheUKLink = By.xpath("//a[contains(text(),'Staying in the UK on a visa without your partner')]");
     By clickOnStayingInTheUKLink = By.xpath("//a[contains(text(),'Staying in the UK on a visa without your partner')]");
 
-//    @FindBy(xpath = "//h1[contains(text(),'Immigration')]")
-//    WebElement verifyImmigrationPage;
-//    @FindBy(xpath = "//a[contains(text(),'Staying in the UK on a visa without your partner')]")
-//    WebElement verifyStayingInTheUKLink;
 
-    public String immigrationPage(){
+    public String immigrationPage() {
         log.info("Verifying the Text, Immigration : " + verifyImmigrationPage.toString());
         return getTextFromElement(verifyImmigrationPage);
     }
@@ -31,8 +27,8 @@ public class ImmigrationPage extends Utility {
         return getTextFromElement(verifyStayingInTheUKLink);
     }
 
-    public void iClickOnStayingInTheUKLink(){
-        mouseHoverToElementAndClick(clickOnStayingInTheUKLink);
+    public void iClickOnStayingInTheUKLink() {
+        clickOnElement(clickOnStayingInTheUKLink);
         log.info("Click on Staying in the UK on a visa link : " + clickOnStayingInTheUKLink.toString());
     }
 

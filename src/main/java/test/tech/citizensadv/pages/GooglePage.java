@@ -1,28 +1,39 @@
 package test.tech.citizensadv.pages;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import test.tech.citizensadv.utility.Utility;
 
 public class GooglePage extends Utility {
 
+    private static final Logger log = LogManager.getLogger(GooglePage.class.getName());
+
     //Page Object Model
-    By acceptTerms = By.xpath("//*[@id=\"CXQnmb\"]//div//button[@id='L2AGLb']");
+    By googlePopUp = By.xpath("//div[contains(text(),'I agree')]");
     By googleSearchBox = By.name("q");
-    By googleSearchBtn = By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]");
-    By citizensAdviceWebsite = By.xpath("//body/div[@id='main']/div[@id='cnt']/div[@id='rcnt']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/cite[1]");
+    By googleSearchButton = By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@class='gNO89b']");
+    By CitizensAdviceLink = By.xpath("//body/div[@id='main']/div[@id='cnt']/div[@id='rcnt']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/cite[1]");
 
 
-    public void clickOnAgreeBtn(){
-        clickOnElement(acceptTerms);
+    public void setGooglePopUp() {
+        clickOnElement(googlePopUp);
+        log.info("Clicking on the Google PopUp :" + googlePopUp.toString() + "<br>");
     }
 
-    public void clickOnGoogleSearchBtn(){
-        clickOnElement(googleSearchBtn);
+    public void setGoogleSearchBox() {
+        sendTextToElement(googleSearchBox,"Citizens Advice");
+        log.info("Sending Text to Google Search Box :" + googleSearchBox.toString() + "<br>");
     }
-    public void setGoogleSearchBox(String text) {
-        sendTextToElement(googleSearchBox,text);
+
+
+    public void setGoogleSearchButton() {
+        clickOnElement(googleSearchButton);
+        log.info("Clicking on the Google Search Button :" + googleSearchButton.toString() + "<br>");
     }
-    public void setCitizensAdviceWebsite() {
-        mouseHoverToElementAndClick(citizensAdviceWebsite);
+
+    public void setCitizensAdviceLink() {
+        clickOnElement(CitizensAdviceLink);
+        log.info("Clicking on Citizens Advice Link :" + CitizensAdviceLink.toString() + "<br>");
     }
 }
